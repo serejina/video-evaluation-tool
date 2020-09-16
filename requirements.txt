@@ -1,0 +1,4 @@
+Jinja2==2.11.2
+numpy==1.19.1
+opencv-python==4.2.0.34
+pytest==6.0.1

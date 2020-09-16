@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+</head>
+
+<body>
+<div class="container">
+    <h3>Report Summary:</h3>
+    <ul style="list-style-type:circle;"><li>Total video pairs: <b>{{total_videos}}</b></li></ul>
+    <p>{% for item in metrics %}{% for v_id,v_dict in item.items() %}<b>Video ID#{{ v_id }}</b>
+    <ul style="list-style-type:circle;">{% for k,v in v_dict.items()%}{% if v is not iterable or v is string %}
+        <li>{{k}} - {{v}}</li>{% endif %}{% endfor %}</ul>
+    {% for k,v in v_dict.items()%}{% if v is iterable and k == "PSNR"%}
+    <details><summary>PSNR per frame over the course of the video:</summary><p>{{v}}</p></details>
+    {% endif %} {% endfor %} {% endfor %}</p>{% endfor %}
+</div>
+</body>
+
+</html>
