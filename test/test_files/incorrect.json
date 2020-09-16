@@ -1,0 +1,13 @@
+{
+  "videos": [
+    {
+      "reference_video": "/path_to_reference_video.mov",
+      "compressed_video": "/path_to_compressed_video.mp4",
+      "threshold": 30
+    }
+  ],
+  "report_folder": "report_folder_path"
+}
+{
+
+}

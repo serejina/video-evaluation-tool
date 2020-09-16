@@ -46,8 +46,8 @@ class Config(object):
                 self._data = json.load(config)
         except FileNotFoundError:
             raise FileNotFoundError("{} is not found or the path is incorrect".format(self.file_name))
-        except JSONDecodeError:
-            raise JSONDecodeError("{} invalid json file".format(self.file_name))
+        except JSONDecodeError as json_exc:
+            raise JSONDecodeError("{} invalid json file".format(self.file_name), json_exc.doc, json_exc.pos)
 
     @property
     def videos(self) -> list:

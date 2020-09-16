@@ -7,13 +7,13 @@ This is trivial set of scripts which process input videos and create report abou
 It assume that user provide list of pairs with two video files which are needed to be compared.
 ## Project structure <a name="structure"></a>
 ```
-video_coding_evaluation tool (VCETool) - project folder structure
+video-evaluation-tool - project folder structure
 │   README.md  
 │   requirements.txt
 │   main.py
 |
 └─── config  
-│    │   input_config_1.json  
+│    │   input_config.json  
 │   
 └───source
 |   │   config.py
@@ -55,6 +55,7 @@ The folder with all project modules
 Currently, min/max/median PSNR, and ratio of PSNR filtered by specified criteria to all PSNR (i.e. Ratio of PSNR being below a certain configurable threshold)  
 ```psnr.py``` - module with functions to calculate PSNR for each video frames  
 ```report.py``` - module with functions to create html-report with metrics for each processed videos  
+
 ###test
 The folder with unit tests (currently empty)
 
